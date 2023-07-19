@@ -10,7 +10,10 @@
     
    
     <?
-$UserRole = $_SESSION['role']; 
+if(isset($_SESSION) && is_array($_SESSION) && isset($_SESSION['role']) 
+    $UserRole = $_SESSION['role']; 
+else 
+    $UserRole = 'unknown';
 
 echo "<p>".$UserRole."</p>"; 
 ?> 
